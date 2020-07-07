@@ -17,10 +17,12 @@
 
 @implementation LoginViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
 - (IBAction)onLogin:(id)sender
 {
     NSString *username = self.usernameField.text;
