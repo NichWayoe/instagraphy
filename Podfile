@@ -7,10 +7,12 @@ target 'instagraphy' do
 
   # Pods for instagraphy
     pod 'Parse'
+    
 
   target 'instagraphyTests' do
     inherit! :search_paths
     # Pods for testing
+ 
   end
 
   target 'instagraphyUITests' do
