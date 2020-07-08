@@ -17,12 +17,17 @@
 
 
 @implementation HomeFeedViewController
+- (IBAction)onTapCamera:(id)sender
+{
+    [self performSegueWithIdentifier:@"secondsegue" sender:nil];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
 }
+
 - (IBAction)onLogout:(id)sender
 {
     SceneDelegate *myDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
@@ -30,7 +35,6 @@
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     myDelegate.window.rootViewController = loginViewController;
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        // PFUser.current() will now be nil
     }];
 
 }
