@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation HomeFeedViewController
@@ -33,6 +34,14 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.posts = [[NSMutableArray alloc] init];
+    [self postFetcher];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(postFetcher) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
+}
+
+- (void)postFetcher
+{
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     query.limit = 20;
     [query orderByDescending:@"createdAt"];
@@ -42,6 +51,7 @@
             self.posts = (NSMutableArray *) posts;
             NSLog(@"%@",posts);
             [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
             
     } else{
             NSLog(@"%@", error.localizedDescription);
@@ -50,6 +60,7 @@
     }];
     
 }
+
 
 - (IBAction)onLogout:(id)sender
 {
