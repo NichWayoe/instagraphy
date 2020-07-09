@@ -10,12 +10,17 @@
 #import "Parse/Parse.h"
 
 @interface LoginViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
 @end
 
 @implementation LoginViewController
+
+- (IBAction)onTap:(id)sender {
+    [self.view endEditing:YES];
+}
 
 - (void)viewDidLoad
 {
@@ -46,7 +51,6 @@
                 NSLog(@"Error: %@", error.localizedDescription);
         } else {
             NSLog(@"User registered successfully");
-
             }
         }];
 }
