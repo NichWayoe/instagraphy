@@ -7,7 +7,9 @@
 //
 
 #import "Post.h"
+
 @implementation Post
+
 @dynamic postID;
 @dynamic userID;
 @dynamic author;
@@ -37,12 +39,10 @@
     if (!image) {
         return nil;
     }
-    
     NSData *imageData = UIImagePNGRepresentation(image);
     if (!imageData) {
         return nil;
     }
-    
     return [PFFileObject fileObjectWithData:imageData];
 }
 

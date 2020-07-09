@@ -45,14 +45,13 @@
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     [self presentViewController:imagePickerVC animated:YES completion:nil];
-
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
-    self.postImageView.image = [ self resizeImage:editedImage withSize:CGSizeMake(414, 414)];
+    self.postImageView.image = [self resizeImage:editedImage withSize:CGSizeMake(414, 414)];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
