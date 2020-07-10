@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailViewController : ViewController
 
-@property (strong,nonatomic) Post *tappedPost;
+@property (strong,nonatomic) Post *post;
 
 @end
 

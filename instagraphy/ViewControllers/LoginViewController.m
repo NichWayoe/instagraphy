@@ -36,7 +36,7 @@
               NSLog(@"User log in failed: %@", error.localizedDescription);
           } else {
               NSLog(@"User logged in successfully");
-               [self performSegueWithIdentifier:@"firstsegue" sender:nil];
+               [self performSegueWithIdentifier:@"homeFeedSegue" sender:nil];
           }
       }];
 }

@@ -7,6 +7,8 @@ target 'instagraphy' do
 
   # Pods for instagraphy
     pod 'Parse'
+    pod 'DateTools'
+    pod 'Parse/UI'
     
 
   target 'instagraphyTests' do

@@ -11,12 +11,18 @@
 #import "Post.h"
 
 @interface ComposeViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 @property (weak, nonatomic) IBOutlet UITextView *captionView;
 
 @end
 
 @implementation ComposeViewController
+
+- (IBAction)onCancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (IBAction)onSave:(id)sender
 {
@@ -49,7 +55,6 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
-    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     self.postImageView.image = [self resizeImage:editedImage withSize:CGSizeMake(414, 414)];
     [self dismissViewControllerAnimated:YES completion:nil];

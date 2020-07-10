@@ -28,7 +28,7 @@
 
 - (IBAction)onTapCamera:(id)sender
 {
-    [self performSegueWithIdentifier:@"secondsegue" sender:nil];
+    [self performSegueWithIdentifier:@"composePostSegue" sender:nil];
 }
 
 - (void)viewDidLoad
@@ -90,7 +90,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
     Post *tappedPost = self.posts[indexPath.row];
     DetailViewController *detailViewController =[segue destinationViewController];
-    detailViewController.tappedPost = tappedPost;
-        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];}
+    detailViewController.post = tappedPost;
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];}
 }
 @end
