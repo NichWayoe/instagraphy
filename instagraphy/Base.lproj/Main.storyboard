@@ -22,6 +22,9 @@
                                         <rect key="frame" x="40" y="216" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onActivateLoginButton:" destination="BYZ-38-t0r" eventType="editingChanged" id="gD6-BQ-mKQ"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0hx-E1-gUX">
                                         <rect key="frame" x="40" y="266" width="334" height="34"/>
@@ -98,7 +101,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="2lg-mh-gtA"/>
                     <connections>
+                        <outlet property="loginButton" destination="Shu-j9-2UX" id="JbG-dS-gBz"/>
                         <outlet property="passwordField" destination="0hx-E1-gUX" id="ekd-4S-Jf1"/>
+                        <outlet property="signUpButton" destination="Hu8-oZ-e2d" id="PZk-jf-meN"/>
                         <outlet property="usernameField" destination="M6p-Ma-dFi" id="vR4-tK-YX9"/>
                         <segue destination="frF-K2-NHG" kind="show" identifier="homeFeedSegue" id="sQS-a1-j6L"/>
                     </connections>
