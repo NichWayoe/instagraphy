@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-
+#import "DateTools.h"
 
 @interface DetailViewController ()
 
@@ -21,10 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",self.tappedPost.caption);
-    self.captionLabel.text = self.tappedPost.caption;
-    self.timeStampLabel.text = [NSString stringWithFormat:@"%@",self.tappedPost.createdAt];
-    self.postImageView.file = self.tappedPost.image;
+    NSLog(@"%@",self.post.caption);
+    self.captionLabel.text = self.post.caption;
+    self.timeStampLabel.text = [NSString stringWithFormat:@"%@",self.post.createdAt.shortTimeAgoSinceNow];
+    self.postImageView.file = self.post.image;
     [self.postImageView loadInBackground];
 }
 

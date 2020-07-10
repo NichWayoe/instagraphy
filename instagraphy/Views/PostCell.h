@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PostCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet PFImageView *profileImageView;
+@property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property(nonatomic,strong)Post *post;
 @property (weak, nonatomic) IBOutlet PFImageView *postImageView;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
