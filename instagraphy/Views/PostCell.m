@@ -22,7 +22,7 @@
 
 -(void) setPost:(Post *)post{
     _post = post;
-  self.postImageView.file = post.image;
+    self.postImageView.file = post.image;
 //  self.usernameLabel.text = post.author.username;
     [self.postImageView loadInBackground];
     self.captionLabel.text = post.caption;

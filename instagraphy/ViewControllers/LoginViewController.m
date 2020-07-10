@@ -54,6 +54,7 @@
           }
       }];
 }
+
 - (IBAction)onActivateLoginButton:(id)sender
 {
         self.loginButton.enabled = YES;
