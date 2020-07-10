@@ -10,7 +10,8 @@
 #import "Parse/Parse.h"
 
 @interface LoginViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
@@ -25,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.loginButton.enabled = NO;
+    self.signUpButton.enabled = NO;
 }
 
 - (IBAction)onLogin:(id)sender
@@ -34,11 +37,27 @@
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
           if (error != nil) {
               NSLog(@"User log in failed: %@", error.localizedDescription);
+              UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Login Failed"
+                     message:error.localizedDescription
+              preferredStyle:(UIAlertControllerStyleAlert)];
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"try again"
+                     style:UIAlertActionStyleDefault
+                                       
+                   handler:^(UIAlertAction * _Nonnull action) {
+                   }];
+              [alert addAction:okAction];
+                 [self presentViewController:alert animated:YES completion:^{
+                 }];
           } else {
               NSLog(@"User logged in successfully");
                [self performSegueWithIdentifier:@"homeFeedSegue" sender:nil];
           }
       }];
+}
+- (IBAction)onActivateLoginButton:(id)sender
+{
+        self.loginButton.enabled = YES;
+        self.signUpButton.enabled = YES;
 }
 
 - (IBAction)onSignUp:(id)sender
