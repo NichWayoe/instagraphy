@@ -69,8 +69,21 @@
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
                 NSLog(@"Error: %@", error.localizedDescription);
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sign Up Failed"
+                               message:error.localizedDescription
+                        preferredStyle:(UIAlertControllerStyleAlert)];
+                          UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"try again"
+                               style:UIAlertActionStyleDefault
+                                                 
+                             handler:^(UIAlertAction * _Nonnull action) {
+                             }];
+                        [alert addAction:okAction];
+                           [self presentViewController:alert animated:YES completion:^{
+                           }];
         } else {
             NSLog(@"User registered successfully");
+            [self performSegueWithIdentifier:@"homeFeedSegue" sender:nil];
+            
             }
         }];
 }

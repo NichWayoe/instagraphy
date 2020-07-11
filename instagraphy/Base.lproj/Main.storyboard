@@ -117,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="3730.434782608696" y="107.8125"/>
         </scene>
-        <!--Title-->
+        <!--instagraphy-->
         <scene sceneID="6FK-dD-6Hj">
             <objects>
                 <viewController storyboardIdentifier="HomeFeedViewController" id="3E2-vX-f7F" customClass="HomeFeedViewController" sceneMemberID="viewController">
@@ -145,12 +145,6 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMO-kK-xJa">
                                                     <rect key="frame" x="20" y="394" width="366" height="20.333333333333314"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kp-Ew-GkS">
-                                                    <rect key="frame" x="78" y="19" width="76" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -212,7 +206,6 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="dMO-kK-xJa" secondAttribute="trailing" constant="8" id="J5Q-Fa-1Fu"/>
                                                 <constraint firstItem="anr-hD-7Xf" firstAttribute="leading" secondItem="sRh-qq-UZp" secondAttribute="trailing" constant="16" id="LL3-fJ-gWj"/>
                                                 <constraint firstItem="alU-lN-kGH" firstAttribute="top" secondItem="sRh-qq-UZp" secondAttribute="top" id="LUP-zF-Lx9"/>
-                                                <constraint firstItem="5kp-Ew-GkS" firstAttribute="leading" secondItem="ZD8-9B-DRB" secondAttribute="trailing" constant="8" id="N0O-6N-WhI"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="d5Q-05-tKb" secondAttribute="trailing" id="NNd-Ca-DA2"/>
                                                 <constraint firstItem="HYv-Qd-aNP" firstAttribute="bottom" secondItem="sRh-qq-UZp" secondAttribute="bottom" id="RgM-TE-UXK"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HYv-Qd-aNP" secondAttribute="trailing" id="S5i-a7-ib3"/>
@@ -220,7 +213,6 @@
                                                 <constraint firstItem="alU-lN-kGH" firstAttribute="bottom" secondItem="sRh-qq-UZp" secondAttribute="bottom" id="YEg-0j-MDx"/>
                                                 <constraint firstItem="anr-hD-7Xf" firstAttribute="bottom" secondItem="sRh-qq-UZp" secondAttribute="bottom" id="bD4-B1-aAM"/>
                                                 <constraint firstItem="HYv-Qd-aNP" firstAttribute="top" secondItem="lUt-De-RK5" secondAttribute="bottom" constant="16" id="cUp-3e-utd"/>
-                                                <constraint firstItem="5kp-Ew-GkS" firstAttribute="top" secondItem="Qyq-YX-1P5" secondAttribute="topMargin" constant="8" id="h9k-2i-aeK"/>
                                                 <constraint firstItem="HYv-Qd-aNP" firstAttribute="top" secondItem="sRh-qq-UZp" secondAttribute="top" id="jVQ-z8-9oh"/>
                                                 <constraint firstItem="ZD8-9B-DRB" firstAttribute="leading" secondItem="Qyq-YX-1P5" secondAttribute="leadingMargin" id="jb6-Wp-KGG"/>
                                                 <constraint firstItem="alU-lN-kGH" firstAttribute="leading" secondItem="anr-hD-7Xf" secondAttribute="trailing" constant="16" id="m8w-J1-dTL"/>
@@ -234,7 +226,6 @@
                                             <outlet property="captionLabel" destination="dMO-kK-xJa" id="5eh-1w-cIp"/>
                                             <outlet property="postImageView" destination="lUt-De-RK5" id="ETr-je-Zvv"/>
                                             <outlet property="profileImageView" destination="lUt-De-RK5" id="Efm-rO-UZE"/>
-                                            <outlet property="usernameLabel" destination="5kp-Ew-GkS" id="cT5-RL-uCb"/>
                                             <segue destination="B4O-oL-lNp" kind="show" identifier="detailViewSegue" id="cZY-mR-erd"/>
                                         </connections>
                                     </tableViewCell>
@@ -250,7 +241,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qze-5g-mS5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="diZ-Gj-vlf">
+                    <navigationItem key="navigationItem" title="instagraphy" id="diZ-Gj-vlf">
                         <barButtonItem key="leftBarButtonItem" title="log out" id="2Gi-Wb-ryJ">
                             <connections>
                                 <action selector="onLogout:" destination="3E2-vX-f7F" id="LmP-he-uZs"/>
